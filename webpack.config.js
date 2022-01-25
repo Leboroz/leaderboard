@@ -1,4 +1,6 @@
-import { resolve } from 'path'
+const { resolve } = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -12,6 +14,12 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /.html$/i,
+        use: {
+          loader: 'html-loader',
+        },
+      },
       {
         test: /\.s[ac]ss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
