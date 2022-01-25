@@ -1,5 +1,5 @@
-import header from './modules/components/header.mjs'
-import leaderBoardContainer from './modules/components/main-section.mjs'
-import './sass/index.scss'
+import header from './modules/components/header';
+import leaderBoardContainer from './modules/components/main-section';
+import './sass/index.scss';
 
-document.getElementById('header').append(header(), leaderBoardContainer())
+document.getElementById('header').append(header(), leaderBoardContainer());

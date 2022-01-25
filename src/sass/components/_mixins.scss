@@ -20,7 +20,9 @@ $grid-breakpoints: (
     }
 
     // If the breakpoint doesn't exist in the map.
-  } @else {
+  }
+
+  @else {
     // Log a warning.
     @warn 'Invalid breakpoint: #{$breakpoint}.';
   }
