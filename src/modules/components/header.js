@@ -1,4 +1,4 @@
-export default function header() {
+const header = () => {
   const header = document.createElement('section');
   header.className = 'title padding-x';
   header.innerHTML = `
@@ -7,4 +7,6 @@ export default function header() {
   </div>`;
 
   return header;
-}
+};
+
+export default header;
