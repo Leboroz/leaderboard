@@ -1,0 +1,18 @@
+@use './mixins' as m;
+
+.display-1 {
+  @include m.breakpoint-up(lg) {
+    font-size: 5rem;
+  }
+}
+
+.display-2 {
+  @include m.breakpoint-up(md) {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  @include m.breakpoint-up(lg) {
+    font-size: 2.3rem;
+    font-weight: 500;
+  }
+}
