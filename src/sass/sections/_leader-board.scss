@@ -1,0 +1,55 @@
+@use '../components/mixins' as *;
+
+.leader-board-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  @include breakpoint-up(lg) {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .leader-board {
+    flex: 1;
+    .recent-scores {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .board {
+      list-style: none;
+      border: 1px solid rgba($color: #000, $alpha: 1);
+      .item {
+        padding: 0.75rem 1rem;
+        &__2 {
+          background-color: rgba($color: #000, $alpha: 0.2);
+        }
+      }
+    }
+  }
+  .form-container {
+    flex: 1;
+
+    .display-2 {
+      text-align: center;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      input {
+        width: 100%;
+        padding: 15px;
+      }
+      .btn {
+        align-self: flex-end;
+      }
+    }
+  }
+}
