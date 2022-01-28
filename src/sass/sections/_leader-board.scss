@@ -1,12 +1,19 @@
 @use '../components/mixins' as *;
+@use '../global' as *;
+
+@keyframes show {
+  to {
+    transform: translateX(0);
+  }
+}
 
 .leader-board-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-top: 2rem;
+  height: 100%;
 
-  @include breakpoint-up(lg) {
+  @include breakpoint-up(md) {
     flex-direction: row;
     justify-content: center;
   }
@@ -15,6 +22,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding-top: 2rem;
   }
 
   .leader-board {
@@ -28,15 +36,36 @@
 
     .board {
       list-style: none;
-      border: 1px solid rgba($color: #000, $alpha: 1);
-      height: 60vh;
+      border: 1px solid rgba($dark-blue, $alpha: 1);
       overflow: auto;
+      position: relative;
+      height: 70%;
+
+      @include breakpoint-up(lg) {
+        height: 70%;
+      }
+
+      &:nth-child(1) {
+        position: relative;
+
+        .fa-trophy {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 5px;
+        }
+      }
 
       .item {
         padding: 0.75rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateX(-100px);
+        animation: show 100ms ease forwards;
 
         &__2 {
-          background-color: rgba($color: #000, $alpha: 0.2);
+          background-color: rgba($dark-blue, $alpha: 0.2);
         }
       }
     }
@@ -44,19 +73,41 @@
 
   .form-container {
     flex: 1;
+    background-color: $dark-blue;
 
     .display-2 {
       text-align: center;
+      color: $primary;
     }
 
     .form {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem;
+
+      @include breakpoint-up(lg) {
+        gap: 2rem;
+      }
 
       input {
         width: 100%;
         padding: 15px;
+        box-shadow: 5px 2px 2px rgba($color: #000, $alpha: 0.3);
+        border: 0;
+        outline: none;
+        background-color: $secondary;
+
+        /* Chrome, Safari, Edge, Opera */
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        /* Firefox */
+        &[type='number'] {
+          -moz-appearance: textfield;
+        }
       }
 
       .btn {
