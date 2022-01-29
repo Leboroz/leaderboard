@@ -1,18 +1,24 @@
-@use './mixins' as m;
+@use './mixins' as *;
+@use '../global' as *;
 
 .display-1 {
-  @include m.breakpoint-up(lg) {
-    font-size: 5rem;
+  color: $primary;
+  font-size: 2.5rem;
+
+  @include breakpoint-up(lg) {
+    font-size: 3.5rem;
   }
 }
 
 .display-2 {
-  @include m.breakpoint-up(md) {
+  font-size: 1.1rem;
+
+  @include breakpoint-up(md) {
     font-size: 2rem;
     font-weight: 500;
   }
 
-  @include m.breakpoint-up(lg) {
+  @include breakpoint-up(lg) {
     font-size: 2.3rem;
     font-weight: 500;
   }
