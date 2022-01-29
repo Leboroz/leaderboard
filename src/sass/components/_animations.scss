@@ -1,0 +1,30 @@
+@mixin show {
+  animation: show 100ms ease forwards;
+}
+
+@keyframes show {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@mixin pop {
+  animation: popm 2000ms ease-out forwards;
+}
+
+@keyframes popm {
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  70% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}

@@ -1,5 +1,5 @@
 export default class LeaderBoardAPI {
-  static URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api'
+  static URL = process.env.URL
 
   static gameName = '/games/'
 
@@ -38,6 +38,7 @@ export default class LeaderBoardAPI {
   }
 
   static setId(id) {
+    this.id = id;
     this.scoreURL = `/games/${id}/scores/`;
   }
 }
