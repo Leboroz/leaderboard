@@ -1,0 +1,16 @@
+@use '../global' as *;
+
+.btn {
+  display: block;
+  padding: 0.2rem 1.75rem;
+  background-color: rgba($secondary, $alpha: 0.7);
+  width: max-content;
+  height: max-content;
+  border: 0;
+  box-shadow: 5px 2px 2px rgba($color: #000, $alpha: 0.3);
+
+  &:hover {
+    background-color: rgba($blue, $alpha: 0.5);
+    color: #fff;
+  }
+}

@@ -1,0 +1,10 @@
+@use '../global' as *;
+
+#header {
+  height: 10%;
+
+  .title {
+    background-color: $blue;
+    height: 100%;
+  }
+}

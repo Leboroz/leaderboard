@@ -1,0 +1,14 @@
+@use '../global' as *;
+
+.pop-up {
+  padding: 1rem 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: $secondary;
+  text-align: center;
+  box-shadow: 5px 2px 2px rgba($color: #000, $alpha: 0.3);
+  flex-direction: column;
+  transition: visibility 300ms;
+}
