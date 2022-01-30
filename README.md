@@ -1,72 +1,71 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Leaderboard
 
-> Description the project.
+> This is a leaderboard that allows the user to created boards and input scores to them usin Rest API. Also, it saves new boards into local storage.
 
+![screenshot](./src/assets/app_screenshot.png)
 
 ## Built With
 
 - Major languages
-- Frameworks
+  - HTML
+  - Javascript
+  - SASS
 - Technologies used
+  - npm
+  - webpack
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
-
+[Live Demo Link](https://leboroz.github.io/leaderboard/)
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- npm
+- git
+
 ### Setup
+
+- open terminal or bash
+- run
+  - `git clone https://github.com/Leboroz/leaderboard.git`
 
 ### Install
 
+- run
+  - `cd leaderboard`
+  - `npm install`
+  - `npm start` to run the server
+
 ### Usage
 
-### Run tests
+_The board displays scores from the main id which is hardcoded. To create a new board press the new game button. You can input names as strings and scores as strings_
 
 ### Deployment
 
+- run
+  - `npm run build`
 
+👤 **Leonardo Albornoz**
 
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Leboroz](https://github.com/leboroz)
+- Twitter: [@Leboroz](https://twitter.com/leboroz)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/leonardo-albornoz-216784198/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/leboroz/leaderboard/issues).
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+Give a ⭐️ if you like this project!s
 
 ## 📝 License
 
