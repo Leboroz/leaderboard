@@ -41,7 +41,7 @@ const refresh = () => {
     for (let i = 0; i < result.length; i += 1) {
       const { user, score } = result[i];
       setTimeout(() => {
-        list.appendChild(createListElement(user, score, i));
+        list.appendChild(createListElement(user, score.slice(0, 9), i));
       }, 100 + i * 20);
     }
   });
