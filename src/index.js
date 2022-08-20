@@ -59,6 +59,14 @@ const run = (id) => {
   LocalStorageAPI.get(gameList);
 
   LeaderBoardAPI.setId(id);
+
+  document.getElementById('score').addEventListener('keydown', (e) => {
+    let value = e.currentTarget.value;
+    if(value > 99999999){
+      e.currentTarget.value = parseInt(value / 10);
+    }
+  })
+
   document.getElementById('form').addEventListener('submit', (e) => {
     const nameInput = document.getElementById('name').value;
     const scoreInput = document.getElementById('score').value;
